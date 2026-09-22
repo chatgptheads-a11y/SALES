@@ -660,6 +660,172 @@
     }
   }
 
+
+  :root{
+    --practice-accent:#5B5CE2;
+  }
+
+  .live-practice{
+    background:var(--practice-accent);
+    color:white;
+    border-top:none;
+  }
+
+  .live-practice .eyebrow{
+    color:rgba(255,255,255,.72);
+  }
+
+  .live-practice h2{
+    color:white;
+    max-width:980px;
+    margin-bottom:30px;
+  }
+
+  .live-practice-layout{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:68px;
+    align-items:end;
+  }
+
+  .live-practice-copy{
+    font-size:24px;
+    line-height:1.28;
+    letter-spacing:-.025em;
+    max-width:760px;
+    color:rgba(255,255,255,.9);
+  }
+
+  .live-practice-copy strong{
+    color:white;
+    font-weight:820;
+  }
+
+  .live-practice-points{
+    display:grid;
+    gap:1px;
+    background:rgba(255,255,255,.24);
+    border:1px solid rgba(255,255,255,.24);
+  }
+
+  .live-practice-point{
+    background:rgba(18,18,24,.14);
+    padding:26px 28px;
+    min-height:126px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+
+  .live-practice-point span{
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    color:rgba(255,255,255,.68);
+    font-weight:800;
+  }
+
+  .live-practice-point strong{
+    font-size:21px;
+    line-height:1.12;
+    letter-spacing:-.03em;
+    max-width:360px;
+  }
+
+  .live-case-callout{
+    margin-top:34px;
+    display:flex;
+    justify-content:space-between;
+    gap:28px;
+    align-items:center;
+    border-top:1px solid rgba(255,255,255,.28);
+    padding-top:26px;
+  }
+
+  .live-case-callout strong{
+    font-size:30px;
+    line-height:1;
+    letter-spacing:-.04em;
+    max-width:620px;
+  }
+
+  .live-case-callout span{
+    font-size:14px;
+    color:rgba(255,255,255,.72);
+    text-align:right;
+    max-width:260px;
+  }
+
+  @media (max-width:900px){
+    .live-practice-layout{
+      grid-template-columns:1fr;
+      gap:34px;
+    }
+    .live-practice-copy{font-size:20px;}
+    .live-case-callout{
+      align-items:flex-start;
+      flex-direction:column;
+      gap:12px;
+    }
+    .live-case-callout span{text-align:left;}
+  }
+
+  @media (max-width:560px){
+    .live-practice h2{font-size:36px;}
+    .live-practice-copy{font-size:18px;}
+    .live-practice-point{
+      min-height:112px;
+      padding:22px;
+    }
+    .live-practice-point strong{font-size:19px;}
+    .live-case-callout strong{font-size:27px;}
+  }
+
+  @media (max-width:380px){
+    .live-practice h2{font-size:32px;}
+    .live-case-callout strong{font-size:24px;}
+  }
+
+
+  /* Mobile overflow safety */
+  html, body{
+    max-width:100%;
+    overflow-x:hidden;
+  }
+
+  img{
+    max-width:100%;
+  }
+
+  .hero-bottom > *,
+  .proof-wrap > *,
+  .proof-bottom > *,
+  .dev-intro > *,
+  .prereg-grid > *,
+  .live-practice-layout > *,
+  .valentina-head > *{
+    min-width:0;
+  }
+
+  h1, h2, h3{
+    overflow-wrap:break-word;
+  }
+
+  @media (max-width:560px){
+    .navin,
+    .brand,
+    .organizer-logos{
+      min-width:0;
+    }
+
+    .hero,
+    .section,
+    .prereg-section,
+    .closing{
+      overflow-x:hidden;
+    }
+  }
+
 </style>
 </head>
 <body>
@@ -1005,6 +1171,45 @@
       <div class="valentina-signature">
         <strong>Валентина Фирсова</strong>
         <span>HR-эксперт в архитектуре · советник CEO архитектурных бюро</span>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section live-practice" id="live-practice">
+    <div class="wrap">
+      <div class="eyebrow">Практика в реальном времени</div>
+      <h2>Каждый участник будет практиковаться на примере своего бюро.</h2>
+
+      <div class="live-practice-layout">
+        <div class="live-practice-copy">
+          <strong>Каждый участник в зале будет применять инструменты к своему бюро — прямо по ходу практикума.</strong>
+          <br><br>
+          Вы разберёте собственную ситуацию, свои цифры и процессы, увидите сильные стороны системы продаж
+          и поймёте, какие зоны требуют усиления.
+        </div>
+
+        <div class="live-practice-points">
+          <div class="live-practice-point">
+            <span>01 / Применение</span>
+            <strong>Применить рабочие инструменты к своему бюро прямо в зале</strong>
+          </div>
+
+          <div class="live-practice-point">
+            <span>02 / Диагностика</span>
+            <strong>Разобрать свою реальную ситуацию, цифры и процессы</strong>
+          </div>
+
+          <div class="live-practice-point">
+            <span>03 / Результат</span>
+            <strong>Уйти с пониманием своих сильных сторон и конкретных зон усиления</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="live-case-callout">
+        <strong>Каждый работает со своим кейсом. Часть кейсов разберём вместе — прямо в зале.</strong>
+        <span>Не абстрактные упражнения, а реальные ситуации ваших архитектурных бюро.</span>
       </div>
     </div>
   </section>
