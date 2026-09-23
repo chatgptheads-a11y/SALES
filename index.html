@@ -1009,6 +1009,68 @@
     }
   }
 
+
+  /* Booking section desktop balance */
+  .prereg-grid{
+    grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);
+    gap:48px;
+  }
+
+  .prereg-copy{
+    min-width:0;
+  }
+
+  .prereg-form{
+    min-width:0;
+  }
+
+  .prereg-title,
+  .prereg-copy h2{
+    font-size:clamp(54px,4.7vw,68px) !important;
+    line-height:.94 !important;
+    letter-spacing:-.05em !important;
+    max-width:100% !important;
+  }
+
+  @media (max-width:1100px){
+    .prereg-grid{
+      grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+      gap:36px;
+    }
+
+    .prereg-title,
+    .prereg-copy h2{
+      font-size:clamp(46px,5vw,58px) !important;
+    }
+  }
+
+  @media (max-width:900px){
+    .prereg-grid{
+      grid-template-columns:1fr;
+      gap:36px;
+    }
+
+    .prereg-title,
+    .prereg-copy h2{
+      font-size:clamp(38px,8vw,52px) !important;
+    }
+  }
+
+  @media (max-width:560px){
+    .prereg-title,
+    .prereg-copy h2{
+      font-size:clamp(34px,8.4vw,44px) !important;
+      line-height:.96 !important;
+    }
+  }
+
+  @media (max-width:380px){
+    .prereg-title,
+    .prereg-copy h2{
+      font-size:clamp(30px,7.8vw,36px) !important;
+    }
+  }
+
 </style>
 </head>
 <body>
