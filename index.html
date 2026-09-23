@@ -807,9 +807,6 @@
     min-width:0;
   }
 
-  h1, h2, h3{
-    overflow-wrap:break-word;
-  }
 
   @media (max-width:560px){
     .navin,
@@ -893,6 +890,122 @@
     }
     .developer-panel{
       padding:22px;
+    }
+  }
+
+
+  /* Typography integrity: never split a word across lines */
+  h1, h2, h3,
+  .lead,
+  .quote-card,
+  .developer-hero-title,
+  .developer-panel-title,
+  .proof-story,
+  .case-card h3,
+  .speaker h3,
+  .valentina-card h3,
+  .live-practice-point strong,
+  .live-case-callout strong,
+  .prereg-copy h2,
+  .price-num {
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+  }
+
+  /* Allow normal wrapping only at spaces */
+  h1, h2, h3,
+  .developer-hero-title,
+  .developer-panel-title,
+  .quote-card,
+  .proof-story,
+  .case-card h3,
+  .speaker h3,
+  .valentina-card h3,
+  .live-practice-point strong,
+  .live-case-callout strong,
+  .prereg-copy h2 {
+    white-space: normal;
+  }
+
+  /* Mobile headline tuning so full words fit without forced breaks */
+  @media (max-width:900px){
+    h1{
+      font-size:clamp(42px, 8.2vw, 64px);
+      line-height:.92;
+      letter-spacing:-.055em;
+    }
+
+    h2{
+      font-size:clamp(38px, 7vw, 58px);
+      line-height:.98;
+    }
+
+    .prereg-copy h2,
+    .prereg-title{
+      font-size:clamp(38px, 8vw, 56px);
+      line-height:.95;
+      max-width:100%;
+    }
+  }
+
+  @media (max-width:560px){
+    .wrap{
+      padding-left:20px;
+      padding-right:20px;
+    }
+
+    h1{
+      font-size:clamp(34px, 9vw, 46px);
+      line-height:.94;
+      letter-spacing:-.045em;
+    }
+
+    h2{
+      font-size:clamp(32px, 8vw, 44px);
+      line-height:1;
+      letter-spacing:-.045em;
+    }
+
+    .prereg-copy h2{
+      font-size:clamp(34px, 8.8vw, 44px);
+      line-height:.96;
+      max-width:100%;
+    }
+
+    .developer-hero-title,
+    .developer-panel-title,
+    .case-card h3,
+    .speaker h3,
+    .valentina-card h3,
+    .live-case-callout strong{
+      font-size:clamp(24px, 6.5vw, 32px);
+      line-height:1.04;
+    }
+
+    .quote-card{
+      font-size:clamp(24px, 6.2vw, 30px);
+    }
+  }
+
+  @media (max-width:380px){
+    .wrap{
+      padding-left:16px;
+      padding-right:16px;
+    }
+
+    h1{
+      font-size:clamp(31px, 8.6vw, 38px);
+      line-height:.96;
+    }
+
+    h2{
+      font-size:clamp(29px, 7.8vw, 38px);
+    }
+
+    .prereg-copy h2{
+      font-size:clamp(30px, 8vw, 38px);
+      letter-spacing:-.04em;
     }
   }
 
@@ -1378,7 +1491,7 @@
       <div class="prereg-grid">
         <div class="prereg-copy">
           <div class="eyebrow" style="color:#9d9f99">Предзапись</div>
-          <h2>Забронировать место</h2>
+          <h2 class="prereg-title">Забронировать место</h2>
           <p>
             Оставьте короткую заявку. Мы зафиксируем ваше место в предварительном списке участников
             и свяжемся по указанному телефону.
